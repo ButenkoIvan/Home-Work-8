@@ -1,0 +1,18 @@
+package HW8;
+
+public class Mediator {
+
+    public static String printer(Shape shape) {
+        return shape.getName();
+    }
+    public static int area(Shape shape) {
+
+        int area = 0;
+        if (shape.getName().equals("circle")) {
+            area = (int) (Math.pow((shape.getRadius()), 2) * 3.14);
+            return area;
+        }
+
+        return area;
+    }
+}
