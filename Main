@@ -1,0 +1,26 @@
+package HW8;
+////Вигадати ієрархію класів. Тут вовинні бути як мінімум:
+////
+////базовий клас для фігури Shape. Цей клас повинен мати метод для
+//// виведення імені фігури.
+////класи-спадкоємці - Circle, Quad і т.д. - не менше 5 варіантів;
+////повинен бути клас, який набуває фігури, і виводить її назву.
+//// Класс должен работать именно с базовым классов Shape.
+////Клас повинен працювати саме з базовим класом Shape,
+//// модифікаторів доступу.
+////Немає єдиного правильного способу вирішення цього завдання. Спробуй
+//// спроектувати гнучку архітектуру, задаючи питання виду " А
+//// що буде, якщо цей клас потрібно буде міняти? Що ще зміниться,
+//// якщо тут потрібно буде розширити?.
+
+public class Main {
+    public static void main(String[] args) {
+        //example for "circle"
+        Circle circle = new Circle();
+        System.out.println("Shape is " + Mediator.printer(circle));
+        circle.setxStart(10); //setters are working
+        circle.setyStart(21);
+        System.out.println("Shape.radius = " + Shape.getRadius());
+        System.out.println("Area of shape is " + Mediator.area(circle));
+    }
+}
