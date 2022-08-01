@@ -1,0 +1,102 @@
+package HW8;
+
+public abstract class Shape {
+    private final String name;
+    private int yStart;
+    private int xStart;
+    private int yEnd;
+    private int xEnd;
+    private int incline;
+    private boolean fill;
+    private static int radius;
+    private byte beams;
+
+    public String getName() {
+        return name;
+    }
+
+    protected Shape(String name, int xStart, int yStart, int radius , boolean fill) {
+        //for circle
+        this.name = name;
+        this.xStart = xStart;
+        this.yStart = yStart;
+        this.radius = radius;
+        this.fill = fill;
+    }
+    protected Shape(String name, int xStart, int yStart, int xEnd, int yEnd, boolean fill) {
+        this.name = name;
+        this.xStart = xStart;
+        this.yStart = yStart;
+        this.fill = fill;
+    }
+    protected Shape(String name, int xStart, int yStart, int radius , byte beams, int incline, boolean fill) {
+        this.name = name;
+        this.xStart = xStart;
+        this.yStart = yStart;
+        this.fill = fill;
+        this.radius = radius;
+    }
+    public int getyStart() {
+        return yStart;
+    }
+
+    public void setyStart(int yStart) {
+        this.yStart = yStart;
+    }
+
+    public int getxStart() {
+        return xStart;
+    }
+
+    public void setxStart(int xStart) {
+        this.xStart = xStart;
+    }
+
+    public int getyEnd() {
+        return yEnd;
+    }
+
+    public void setyEnd(int yEnd) {
+        this.yEnd = yEnd;
+    }
+
+    public int getxEnd() {
+        return xEnd;
+    }
+
+    public void setxEnd(int xEnd) {
+        this.xEnd = xEnd;
+    }
+
+    public int getIncline() {
+        return incline;
+    }
+
+    public void setIncline(int incline) {
+        this.incline = incline;
+    }
+
+    public boolean isFill() {
+        return fill;
+    }
+
+    public void setFill(boolean fill) {
+        this.fill = fill;
+    }
+
+    public static int getRadius() {
+        return radius;
+    }
+
+    public static void setRadius(int radius) {
+        Shape.radius = radius;
+    }
+
+    public byte getBeams() {
+        return beams;
+    }
+
+    public void setBeams(byte beams) {
+        this.beams = beams;
+    }
+}
